@@ -3,6 +3,7 @@ import React from 'react'
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart } from './redux/actions/actions';
+import Card from './Card/Card';
 export default function Cart({navigation}) {
   const item = useSelector(state => state)
   const dispach = useDispatch()
@@ -12,6 +13,7 @@ export default function Cart({navigation}) {
   return (
     <View style={styles.container}>
       <Text>Cart</Text>
+      <Card name={"Kanak Desai"} number={'1234567890'} ></Card>
       <FlatList 
         key={item.id}
         data={item}
