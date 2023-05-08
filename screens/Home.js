@@ -12,8 +12,8 @@ const [data, setData] = useState([])
           method: 'GET',
           url: 'https://dummyjson.com/products?limit=10&skip=10&select=title,price',
         }).then(res=>{
-          console.log(res.data.products)
-          setData(res.data.products)
+          console.log(res)
+          setData(res)
         }).catch(err=>{
           console.log(err)
         })
