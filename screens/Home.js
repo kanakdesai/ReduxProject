@@ -5,6 +5,7 @@ import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from './redux/actions/actions';
 import Card from 'react-native-gradient-debit-card';
+import Twitter from './Card/twitter/twitter';
 export default function Home({navigation}) {
 const [data, setData] = useState([])
     const getItems = async() => {
@@ -30,8 +31,8 @@ const [data, setData] = useState([])
 
   return (
     <View style={styles.container}>
-    
-    <Card name ={"Kanak Desai"} number={'1234567812345678'} date={'04/27'} color1={'#233329'} color2={'grey'} color3={'#000E21'}></Card>
+    <Twitter></Twitter>
+    {/* <Card name ={"Kanak Desai"} number={'1234567812345678'} date={'04/27'} color1={'#233329'} color2={'grey'} color3={'#000E21'}></Card> */}
     {/* <TouchableOpacity style={styles.cart} onPress={()=>navigation.navigate("Cart")}>
         <Text>Cart</Text>
         <Text>0</Text>
