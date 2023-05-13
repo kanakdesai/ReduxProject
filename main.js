@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 import Home from './screens/Home';
-import Cart from './screens/Cart';
+import Cart from './screens/cart';
 
 const Main = () => {
   return (
