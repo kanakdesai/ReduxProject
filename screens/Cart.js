@@ -6,10 +6,12 @@ export default function Cart() {
 
   const name = useSelector((state)=>state.name)
   const age = useSelector((state)=>state.age)
+  const city = useSelector((state)=>state.city)
   return (
     <View style={styles.container}>
       <Text>This is name {name.name}</Text>
       <Text>{age.age}</Text>
+      <Text>{city.city}</Text>
     </View>
   )
 }

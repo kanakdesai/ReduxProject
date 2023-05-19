@@ -1,15 +1,17 @@
 import { View, Text, StyleSheet,TextInput, Button} from 'react-native'
 import React,{useState} from 'react'
 import { useDispatch } from 'react-redux'
-import { addAge, addName } from '../store/slice/UserSlice'
+import { addAge, addName, addCity } from '../store/slice/UserSlice'
 export default function Home({navigation}) {
     const [name, setName] = useState('')
     const [age, setAge] = useState('')
+    const [city, setCity] = useState('')
     const dispach = useDispatch()
   const SaveDetails=()=>{
       
       dispach(addName(name))
       dispach(addAge(age))
+      dispach(addCity(city))
       
   }
 
@@ -20,6 +22,8 @@ export default function Home({navigation}) {
       <Text>Age</Text>
       <TextInput onChangeText={(a)=>setAge(a)
       } style={styles.palceholderSt} placeholder='age'></TextInput>
+      <Text>City</Text>
+      <TextInput style={styles.palceholderSt} onChangeText={(c)=>setCity(c)}></TextInput>
       <Button onPress={()=>navigation.navigate("Cart",SaveDetails())} title='register'></Button>
     </View>
 
